@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether Dev | Automatisation & IA</title>
+  <style>
+    /* Reset Básico & Variaveis Cyberpunk Delicado */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    :root {
+      --bg-dark: #0b0b12;        /* Preto com toque sutil de violeta */
+      --card-bg: #161524;       /* Roxo escuro fosco */
+      --accent: #a855f7;        /* Roxo néon elegante */
+      --accent-glow: rgba(168, 85, 247, 0.25);
+      --text-main: #f8fafc;      /* Branco cristalino */
+      --text-muted: #94a3b8;     /* Cinza prateado */
+      --border-color: #26243a;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Container Centralizado */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 90px 0 60px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 36px;
+    }
+
+    /* Botão Principal */
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background-color: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 20px var(--accent-glow);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+    }
+
+    /* Cards de Serviços */
+    .services {
+      padding: 80px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 32px;
+      border-radius: 12px;
+      transition: border-color 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Seção Manutenção (€100/mês) */
+    .maintenance {
+      background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-dark) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 48px;
+      margin: 40px 0 80px;
+      text-align: center;
+    }
+
+    .price-tag {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 16px 0;
+    }
+
+    .features-list {
+      list-style: none;
+      max-width: 500px;
+      margin: 24px auto;
+      text-align: left;
+    }
+
+    .features-list li {
+      margin-bottom: 12px;
+      color: var(--text-muted);
+    }
+
+    .features-list li::before {
+      content: "✓ ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrapper">
+      <div class="logo">AETHER<span>.DEV</span></div>
+      <a href="https://wa.me/SUAS_INFORMACOES" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="badge">Automatisation & IA pour Entreprises</span>
+      <h1>Transformez vos processus manuels en workflows automatisés.</h1>
+      <p>Déployez des intégrations personnalisées avec n8n et Python. Gagnez du temps, réduisez les erreurs et optimisez votre activité.</p>
+      <a href="https://wa.me/SUAS_INFORMACOES" class="btn-primary">Réserver un diagnostic gratuit</a>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services">
+      <div class="card">
+        <h3>Workflow Automation (n8n)</h3>
+        <p>Connectez vos outils (CRMs, Formulaires, WhatsApp, Emails) et laissez vos tâches répétitives s'exécuter en arrière-plan sans effort.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Code & Agents IA</h3>
+        <p>Des algorithmes sur mesure en Python/Node.js et des agents IA intégrés pour traiter des données complexes et automatiser les décisions.</p>
+      </div>
+      <div class="card">
+        <h3>Monitoring & Infrastructure</h3>
+        <p>Des systèmes fiables, sécurisés et hébergés pour garantir que vos flux ne s'arrêtent jamais de tourner.</p>
+      </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="maintenance">
+      <h2>Sérénité Garantie : Maintenance & Optimisation</h2>
+      <div class="price-tag">100 € <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/ mois</span></div>
+      <p style="color: var(--text-muted);">Vos processus évoluent, vos automations aussi. Nous assurons un fonctionnement fluide sans interruption.</p>
+      
+      <ul class="features-list">
+        <li>Surveillance active de vos workflows n8n & APIs</li>
+        <li>Résolution prioritaire des erreurs système</li>
+        <li>Mises à jour et ajustements de scripts mensuels</li>
+      </ul>
+
+      <a href="https://wa.me/SUAS_INFORMACOES" class="btn-primary" style="margin-top: 16px;">Lancer votre projet sur WhatsApp</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Aether Dev. Tous droits réservés.
+    </div>
+  </footer>
+
+</body>
+</html>
